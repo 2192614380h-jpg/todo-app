@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0a0a0f;
+  color: #e4e4e7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  padding: 0 20px;
+}
+
+/* 头部 */
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #71717a;
+}
+
+.subtitle span {
+  color: #a1a1aa;
+  font-weight: 600;
+}
+
+/* 输入框 */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 12px 16px;
+  background: #13131a;
+  border: 1px solid #252530;
+  border-radius: 10px;
+  color: #e4e4e7;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-row input:focus {
+  border-color: #6366f1;
+}
+
+.input-row input::placeholder {
+  color: #52525b;
+}
+
+.input-row button {
+  padding: 12px 24px;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.input-row button:hover {
+  background: #818cf8;
+}
+
+/* 列表 */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #13131a;
+  border: 1px solid #252530;
+  border-radius: 10px;
+  transition: border-color 0.15s;
+}
+
+.todo-list li:hover {
+  border-color: #3f3f46;
+}
+
+/* 复选框 */
+.todo-list li input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3f3f46;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.todo-list li input[type="checkbox"]:checked {
+  background: #6366f1;
+  border-color: #6366f1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 文字 */
+.todo-list li span {
+  flex: 1;
+  font-size: 15px;
+  word-break: break-all;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #52525b;
+}
+
+/* 删除按钮 */
+.todo-list li button {
+  background: none;
+  border: none;
+  color: #52525b;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+.todo-list li:hover button {
+  opacity: 1;
+}
+
+.todo-list li button:hover {
+  color: #ef4444;
+}
+
+/* 清空按钮 */
+.actions {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #52525b;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.15s;
+}
+
+.btn-text:hover {
+  color: #ef4444;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: #3f3f46;
+  font-size: 14px;
+}

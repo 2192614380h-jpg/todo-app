@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo 待办清单</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📋 待办清单</h1>
+      <p class="subtitle"><span id="totalCount">0</span> 项任务，<span id="doneCount">0</span> 项已完成</p>
+    </header>
+
+    <form id="todoForm" class="input-row">
+      <input type="text" id="todoInput" placeholder="输入要做的事情..." autocomplete="off" />
+      <button type="submit">添加</button>
+    </form>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <div class="actions">
+      <button id="clearDone" class="btn-text">清除已完成</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
